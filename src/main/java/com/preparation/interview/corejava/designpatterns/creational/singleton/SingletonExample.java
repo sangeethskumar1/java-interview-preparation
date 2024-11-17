@@ -3,10 +3,6 @@ package com.preparation.interview.corejava.designpatterns.creational.singleton;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-/**
- * Ensures class has only one instance and provides a global point of access to it.
- * Eg: Configuration Settings, Logging, Database Connections
- */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SingletonExample {
     private static SingletonExample singletonExample;
