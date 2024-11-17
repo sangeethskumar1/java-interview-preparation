@@ -1,4 +1,4 @@
-package com.preparation.interview.corejava.designpatterns.creational;
+package com.preparation.interview.corejava.designpatterns.creational.singleton;
 
 public class SingletonClient {
     public static void main(String[] args) {

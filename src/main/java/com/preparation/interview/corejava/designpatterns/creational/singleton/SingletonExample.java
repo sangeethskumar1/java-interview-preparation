@@ -1,4 +1,4 @@
-package com.preparation.interview.corejava.designpatterns.creational;
+package com.preparation.interview.corejava.designpatterns.creational.singleton;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
