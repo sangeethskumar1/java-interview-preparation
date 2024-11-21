@@ -25,4 +25,10 @@
                                                 map(): Transforms the value if present
                                                 flatMap(): Transforms the value and flattens the result
 
-5.
+5.  What is Functional Interface ? What is the use of Functional Interface
+6.  How Spring Boot Works. Explain AutoConfiguration
+7.  Is it mandatory to add @Repository Annotation in Spring Boot Repository Class.? Will it work with @Component
+8.  What are Stereotype Annotations
+9.  What is Spring Application Context
+10. Explain Spring Package Scan
+11.
