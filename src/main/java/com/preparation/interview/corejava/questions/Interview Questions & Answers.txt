@@ -26,9 +26,51 @@
                                                 flatMap(): Transforms the value and flattens the result
 
 5.  What is Functional Interface ? What is the use of Functional Interface
+
 6.  How Spring Boot Works. Explain AutoConfiguration
+
 7.  Is it mandatory to add @Repository Annotation in Spring Boot Repository Class.? Will it work with @Component
-8.  What are Stereotype Annotations
-9.  What is Spring Application Context
-10. Explain Spring Package Scan
-11.
+        No. @Component can also be used instead, but it will lose advantages specific to @Repository. Recommended to use @Repository tag since
+            Semantics: @Repository indicate that a class is DAO class.
+            Exception Translation: It automatically provides translation of database-specific exceptions into Spring's DataAccessException hierarchy.
+
+8.  What are Stereotype Annotations ?
+        Stereotype annotations indicate that the class is managed by spring container. Its part of Spring Component Scan mechanism.
+        All Stereotype Annotations are subtype of @Component.
+        @Component
+        @Service
+        @Repository
+        @Controller
+        @RestController
+
+9.  What is the difference between @Bean & @Component
+        They have different purposed
+        @Bean
+            Comes under @Configuration class to define beans
+            Applies to methods within @Configuration class
+            Used for defining beans programmatically with more control over their instantiation, configuration, and initialization
+        @Component
+            Mark a class as a Spring-managed component and for automatic detection and configuration during component scanning
+            Applied directly to class definitions
+        Key Differences
+            Location: @Bean is applied to methods in configuration classes, while @Component is applied to classes.
+            Discovery: @Bean requires explicit declaration, whereas @Component is automatically detected through classpath scanning.
+            Usage: @Bean gives more fine-grained control over the bean creation process, whereas @Component simplifies bean registration.
+
+10. What is Spring Application Context
+
+11. Explain Spring Package Scan
+
+12. Explain Solid Principles
+        Single Responsibility Principle
+            A class must have only one responsibility
+        Open Close Principle
+            Classes/ Functions must be Open for Extension & Closed for Modification
+        Liskov's Substitution Principle
+            Superclass objects should be replaceable with child class objects without affecting correctness of program
+        Interface Segregation Principle
+            Clients should not be forced to implement interfaces that are not required
+        Dependency Inversion Principle
+            High level modules and low level modules should depend on Abstractions
+
+13.
