@@ -73,4 +73,16 @@
         Dependency Inversion Principle
             High level modules and low level modules should depend on Abstractions
 
-13.
+13. Explain OOPS Concepts
+        Class
+            It is the blueprint or template for creating objects
+        Object
+            Instance of a class
+        Abstraction
+            Hiding the internal functionality and exposing only the required functionality
+        Encapsulation
+            Wrapping up of Data Variables and methods into object. It restricts direct access to object components
+        Inheritance
+            Child class can inherit the properties of parent class
+        Polymorphism
+            Can have multiple implementations.
