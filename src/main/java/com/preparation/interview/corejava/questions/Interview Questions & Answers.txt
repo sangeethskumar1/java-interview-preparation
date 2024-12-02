@@ -14,8 +14,10 @@
         This helps in reducing boilerplate code for simple data carrier classes
 
 4.  What is the use of Optional class even though we have to use Optional.isPresent() in our use cases
-        Expresses Intent:                       Using Optional clearly expresses the possibility of a value being absent, making the code more readable and understandable. When a method returns an Optional, it indicates that the return value might be empty, and the caller should handle it appropriately
-        Reduces Null Pointer Exceptions:        Optional provides methods to handle the absence of values without resorting to null checks. This can help avoid NullPointerException, which is a common source of runtime errors in Java.
+        Expresses Intent:                       Using Optional clearly expresses the possibility of a value being absent, making the code more readable and understandable.
+                                                   When a method returns an Optional, it indicates that the return value might be empty, and the caller should handle it appropriately
+        Reduces Null Pointer Exceptions:        Optional provides methods to handle the absence of values without resorting to null checks.
+                                                This can help avoid NullPointerException, which is a common source of runtime errors in Java.
         Provides Fluent API:                    Optional offers a set of functional-style methods that can make code more concise and expressive:
                                                 isPresent(): Checks if a value is present.
                                                 ifPresent(): Executes a callback if a value is present
@@ -28,6 +30,22 @@
 5.  What is Functional Interface ? What is the use of Functional Interface
 
 6.  How Spring Boot Works. Explain AutoConfiguration
+        Spring Boot simplifies the setup, configuration & run of Spring Applications
+        Spring Boot Starters
+            These are accumulated dependencies for a spring boot application.
+        Embedded Servers
+            Spring Boot Application come with an embedded server like Tomcat. We don't have to deploy our application on an external server.
+        Convention over Configuration
+            This means it provides sensible defaults for most configuration settings, reducing the need to configure your application explicitly
+        Spring Boot CLI
+            A command-line tool that you can use to quickly prototype with spring.
+        Spring Boot Actuators
+            Provides production-ready features like monitoring, metrics, and health checks, which are integrated into your application with minimal setup
+        AutoConfiguration
+            It is one of the key features that make Spring Boot so powerful. It aims to automatically configure your Spring application based on the dependencies and settings present on the classpath
+            @EnableAutoConfiguration Annotation
+                This annotation is typically placed on your main application class. It tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings
+                The @SpringBootApplication annotation is a combination of @EnableAutoConfiguration, @ComponentScan, and @Configuration
 
 7.  Is it mandatory to add @Repository Annotation in Spring Boot Repository Class.? Will it work with @Component
         No. @Component can also be used instead, but it will lose advantages specific to @Repository. Recommended to use @Repository tag since
@@ -58,8 +76,32 @@
             Usage: @Bean gives more fine-grained control over the bean creation process, whereas @Component simplifies bean registration.
 
 10. What is Spring Application Context
+        The Spring Application Context is a central component of the Spring Framework and serves as a container for beans in a Spring application.
+        It manages the lifecycle and configuration of application components (beans) and provides essential features for dependency injection, event propagation, and resource management
+        Bean Factory
+            It extends the BeanFactory interface, providing a complete framework for configuring and managing beans
+        Dependency Injection
+            Automatically injects dependencies into your beans, promoting loose coupling and easier testing
+        Configuration Management
+            Loads bean definitions from various configuration sources
+        Event Handling
+            Supports an event-driven model where beans can publish and listen to events. It allows your application components to communicate effectively and asynchronously
+        Resource Loading
+            Provides a unified way to load resources (like files and URLs) through the ResourceLoader interface
+        Internationalization
+            Supports message sources for internationalization, making it easier to create multilingual applications
+        Application Lifecycle
+            Provides hooks for running code at certain points in the application lifecycle, such as initialization and shutdown
 
 11. Explain Spring Package Scan
+        Package scanning is the process where Spring automatically discovers and registers components (beans) within specified packages.
+        This helps in minimizing the need for explicit bean definitions in XML or Java configuration
+        @ComponentScan Annotation
+            This annotation is used on configuration classes to specify the packages that Spring should scan for annotated components
+        Component Stereotypes
+            Spring looks for classes annotated with @Component, @Service, @Repository, @Controller, or any custom annotation that is itself annotated with @Component
+        Configuration Methods
+            During the scanning process, Spring automatically registers these components as beans in the application context, making them available for dependency injection
 
 12. Explain Solid Principles
         Single Responsibility Principle
