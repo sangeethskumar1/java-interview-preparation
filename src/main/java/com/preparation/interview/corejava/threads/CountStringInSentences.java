@@ -9,7 +9,7 @@ import java.util.List;
 public class CountStringInSentences {
 
     public static void main(String[] args) {
-        List<String> sentences = Arrays.asList("Apple is a fruit", "Doctor asks to eat an apple a day",
+        final List<String> sentences = Arrays.asList("Apple is a fruit", "Doctor asks to eat an apple a day",
                 "Apple keeps us healthy", "Apple is nutritious. Apple contain multivitamins");
 
         final long count = sentences.stream()
