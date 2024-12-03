@@ -1,4 +1,4 @@
-package com.preparation.interview.corejava.threads;
+package com.preparation.interview.corejava.streams;
 
 import java.util.Arrays;
 import java.util.List;

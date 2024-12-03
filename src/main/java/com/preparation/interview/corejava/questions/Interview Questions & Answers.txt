@@ -1,130 +1,130 @@
-1.  What are the new features introduced in Java 11
-        Local-Variable Type Inference (var):    Introduced the var keyword to infer the type of local variables automatically
-        HTTP Client API:                        A new API for making HTTP requests, replacing the older HttpURLConnection
-        Enhanced Performance:                   Various performance improvements, including enhancements to the G1 Garbage Collector
-        Removed Features:                       Deprecated and removed features like the Applet support, Nashorn JavaScript Engine(came with java8)
+What are the new features introduced in Java 11
+    Local-Variable Type Inference (var):    Introduced the var keyword to infer the type of local variables automatically
+    HTTP Client API:                        A new API for making HTTP requests, replacing the older HttpURLConnection
+    Enhanced Performance:                   Various performance improvements, including enhancements to the G1 Garbage Collector
+    Removed Features:                       Deprecated and removed features like the Applet support, Nashorn JavaScript Engine(came with java8)
 
-2.  What are the new features introduced in Java 17
-        Enhanced Performance:                   Various performance improvements, including enhancements to the G1 Garbage Collector and the introduction of the Shenandoah Garbage Collector
-        New Features:                           Records
+What are the new features introduced in Java 17
+    Enhanced Performance:                   Various performance improvements, including enhancements to the G1 Garbage Collector and the introduction of the Shenandoah Garbage Collector
+    New Features:                           Records
 
-3.  What Are Records in java
-        Records are a special kind of class in Java designed to hold immutable data
-        They automatically provide implementations for common methods such as equals(), hashCode(), and toString()
-        This helps in reducing boilerplate code for simple data carrier classes
+What Are Records in java
+    Records are a special kind of class in Java designed to hold immutable data
+    They automatically provide implementations for common methods such as equals(), hashCode(), and toString()
+    This helps in reducing boilerplate code for simple data carrier classes
 
-4.  What is the use of Optional class even though we have to use Optional.isPresent() in our use cases
-        Expresses Intent:                       Using Optional clearly expresses the possibility of a value being absent, making the code more readable and understandable.
-                                                   When a method returns an Optional, it indicates that the return value might be empty, and the caller should handle it appropriately
-        Reduces Null Pointer Exceptions:        Optional provides methods to handle the absence of values without resorting to null checks.
-                                                This can help avoid NullPointerException, which is a common source of runtime errors in Java.
-        Provides Fluent API:                    Optional offers a set of functional-style methods that can make code more concise and expressive:
-                                                isPresent(): Checks if a value is present.
-                                                ifPresent(): Executes a callback if a value is present
-                                                orElse(): Returns a default value if the value is absent
-                                                orElseGet(): Returns a value from a Supplier if the value is absent
-                                                orElseThrow(): Throws an exception if the value is absent
-                                                map(): Transforms the value if present
-                                                flatMap(): Transforms the value and flattens the result
+What is the use of Optional class even though we have to use Optional.isPresent() in our use cases
+    Expresses Intent:                       Using Optional clearly expresses the possibility of a value being absent, making the code more readable and understandable.
+                                               When a method returns an Optional, it indicates that the return value might be empty, and the caller should handle it appropriately
+    Reduces Null Pointer Exceptions:        Optional provides methods to handle the absence of values without resorting to null checks.
+                                            This can help avoid NullPointerException, which is a common source of runtime errors in Java.
+    Provides Fluent API:                    Optional offers a set of functional-style methods that can make code more concise and expressive:
+                                            isPresent(): Checks if a value is present.
+                                            ifPresent(): Executes a callback if a value is present
+                                            orElse(): Returns a default value if the value is absent
+                                            orElseGet(): Returns a value from a Supplier if the value is absent
+                                            orElseThrow(): Throws an exception if the value is absent
+                                            map(): Transforms the value if present
+                                            flatMap(): Transforms the value and flattens the result
 
-5.  What is Functional Interface ? What is the use of Functional Interface
+What is Functional Interface ? What is the use of Functional Interface
 
-6.  How Spring Boot Works. Explain AutoConfiguration
-        Spring Boot simplifies the setup, configuration & run of Spring Applications
-        Spring Boot Starters
-            These are accumulated dependencies for a spring boot application.
-        Embedded Servers
-            Spring Boot Application come with an embedded server like Tomcat. We don't have to deploy our application on an external server.
-        Convention over Configuration
-            This means it provides sensible defaults for most configuration settings, reducing the need to configure your application explicitly
-        Spring Boot CLI
-            A command-line tool that you can use to quickly prototype with spring.
-        Spring Boot Actuators
-            Provides production-ready features like monitoring, metrics, and health checks, which are integrated into your application with minimal setup
-        AutoConfiguration
-            It is one of the key features that make Spring Boot so powerful. It aims to automatically configure your Spring application based on the dependencies and settings present on the classpath
-            @EnableAutoConfiguration Annotation
-                This annotation is typically placed on your main application class. It tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings
-                The @SpringBootApplication annotation is a combination of @EnableAutoConfiguration, @ComponentScan, and @Configuration
+How Spring Boot Works. Explain AutoConfiguration
+    Spring Boot simplifies the setup, configuration & run of Spring Applications
+    Spring Boot Starters
+        These are accumulated dependencies for a spring boot application.
+    Embedded Servers
+        Spring Boot Application come with an embedded server like Tomcat. We don't have to deploy our application on an external server.
+    Convention over Configuration
+        This means it provides sensible defaults for most configuration settings, reducing the need to configure your application explicitly
+    Spring Boot CLI
+        A command-line tool that you can use to quickly prototype with spring.
+    Spring Boot Actuators
+        Provides production-ready features like monitoring, metrics, and health checks, which are integrated into your application with minimal setup
+    AutoConfiguration
+        It is one of the key features that make Spring Boot so powerful. It aims to automatically configure your Spring application based on the dependencies and settings present on the classpath
+        @EnableAutoConfiguration Annotation
+            This annotation is typically placed on your main application class. It tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings
+            The @SpringBootApplication annotation is a combination of @EnableAutoConfiguration, @ComponentScan, and @Configuration
 
-7.  Is it mandatory to add @Repository Annotation in Spring Boot Repository Class.? Will it work with @Component
-        No. @Component can also be used instead, but it will lose advantages specific to @Repository. Recommended to use @Repository tag since
-            Semantics: @Repository indicate that a class is DAO class.
-            Exception Translation: It automatically provides translation of database-specific exceptions into Spring's DataAccessException hierarchy.
+Is it mandatory to add @Repository Annotation in Spring Boot Repository Class.? Will it work with @Component
+    No. @Component can also be used instead, but it will lose advantages specific to @Repository. Recommended to use @Repository tag since
+        Semantics: @Repository indicate that a class is DAO class.
+        Exception Translation: It automatically provides translation of database-specific exceptions into Spring's DataAccessException hierarchy.
 
-8.  What are Stereotype Annotations ?
-        Stereotype annotations indicate that the class is managed by spring container. Its part of Spring Component Scan mechanism.
-        All Stereotype Annotations are subtype of @Component.
-        @Component
-        @Service
-        @Repository
-        @Controller
-        @RestController
+What are Stereotype Annotations ?
+    Stereotype annotations indicate that the class is managed by spring container. Its part of Spring Component Scan mechanism.
+    All Stereotype Annotations are subtype of @Component.
+    @Component
+    @Service
+    @Repository
+    @Controller
+    @RestController
 
-9.  What is the difference between @Bean & @Component
-        They have different purposed
-        @Bean
-            Comes under @Configuration class to define beans
-            Applies to methods within @Configuration class
-            Used for defining beans programmatically with more control over their instantiation, configuration, and initialization
-        @Component
-            Mark a class as a Spring-managed component and for automatic detection and configuration during component scanning
-            Applied directly to class definitions
-        Key Differences
-            Location: @Bean is applied to methods in configuration classes, while @Component is applied to classes.
-            Discovery: @Bean requires explicit declaration, whereas @Component is automatically detected through classpath scanning.
-            Usage: @Bean gives more fine-grained control over the bean creation process, whereas @Component simplifies bean registration.
+What is the difference between @Bean & @Component
+    They have different purposed
+    @Bean
+        Comes under @Configuration class to define beans
+        Applies to methods within @Configuration class
+        Used for defining beans programmatically with more control over their instantiation, configuration, and initialization
+    @Component
+        Mark a class as a Spring-managed component and for automatic detection and configuration during component scanning
+        Applied directly to class definitions
+    Key Differences
+        Location: @Bean is applied to methods in configuration classes, while @Component is applied to classes.
+        Discovery: @Bean requires explicit declaration, whereas @Component is automatically detected through classpath scanning.
+        Usage: @Bean gives more fine-grained control over the bean creation process, whereas @Component simplifies bean registration.
 
-10. What is Spring Application Context
-        The Spring Application Context is a central component of the Spring Framework and serves as a container for beans in a Spring application.
-        It manages the lifecycle and configuration of application components (beans) and provides essential features for dependency injection, event propagation, and resource management
-        Bean Factory
-            It extends the BeanFactory interface, providing a complete framework for configuring and managing beans
-        Dependency Injection
-            Automatically injects dependencies into your beans, promoting loose coupling and easier testing
-        Configuration Management
-            Loads bean definitions from various configuration sources
-        Event Handling
-            Supports an event-driven model where beans can publish and listen to events. It allows your application components to communicate effectively and asynchronously
-        Resource Loading
-            Provides a unified way to load resources (like files and URLs) through the ResourceLoader interface
-        Internationalization
-            Supports message sources for internationalization, making it easier to create multilingual applications
-        Application Lifecycle
-            Provides hooks for running code at certain points in the application lifecycle, such as initialization and shutdown
+What is Spring Application Context
+    The Spring Application Context is a central component of the Spring Framework and serves as a container for beans in a Spring application.
+    It manages the lifecycle and configuration of application components (beans) and provides essential features for dependency injection, event propagation, and resource management
+    Bean Factory
+        It extends the BeanFactory interface, providing a complete framework for configuring and managing beans
+    Dependency Injection
+        Automatically injects dependencies into your beans, promoting loose coupling and easier testing
+    Configuration Management
+        Loads bean definitions from various configuration sources
+    Event Handling
+        Supports an event-driven model where beans can publish and listen to events. It allows your application components to communicate effectively and asynchronously
+    Resource Loading
+        Provides a unified way to load resources (like files and URLs) through the ResourceLoader interface
+    Internationalization
+        Supports message sources for internationalization, making it easier to create multilingual applications
+    Application Lifecycle
+        Provides hooks for running code at certain points in the application lifecycle, such as initialization and shutdown
 
-11. Explain Spring Package Scan
-        Package scanning is the process where Spring automatically discovers and registers components (beans) within specified packages.
-        This helps in minimizing the need for explicit bean definitions in XML or Java configuration
-        @ComponentScan Annotation
-            This annotation is used on configuration classes to specify the packages that Spring should scan for annotated components
-        Component Stereotypes
-            Spring looks for classes annotated with @Component, @Service, @Repository, @Controller, or any custom annotation that is itself annotated with @Component
-        Configuration Methods
-            During the scanning process, Spring automatically registers these components as beans in the application context, making them available for dependency injection
+Explain Spring Package Scan
+    Package scanning is the process where Spring automatically discovers and registers components (beans) within specified packages.
+    This helps in minimizing the need for explicit bean definitions in XML or Java configuration
+    @ComponentScan Annotation
+        This annotation is used on configuration classes to specify the packages that Spring should scan for annotated components
+    Component Stereotypes
+        Spring looks for classes annotated with @Component, @Service, @Repository, @Controller, or any custom annotation that is itself annotated with @Component
+    Configuration Methods
+        During the scanning process, Spring automatically registers these components as beans in the application context, making them available for dependency injection
 
-12. Explain Solid Principles
-        Single Responsibility Principle
-            A class must have only one responsibility
-        Open Close Principle
-            Classes/ Functions must be Open for Extension & Closed for Modification
-        Liskov's Substitution Principle
-            Superclass objects should be replaceable with child class objects without affecting correctness of program
-        Interface Segregation Principle
-            Clients should not be forced to implement interfaces that are not required
-        Dependency Inversion Principle
-            High level modules and low level modules should depend on Abstractions
+Explain Solid Principles
+    Single Responsibility Principle
+        A class must have only one responsibility
+    Open Close Principle
+        Classes/ Functions must be Open for Extension & Closed for Modification
+    Liskov's Substitution Principle
+        Superclass objects should be replaceable with child class objects without affecting correctness of program
+    Interface Segregation Principle
+        Clients should not be forced to implement interfaces that are not required
+    Dependency Inversion Principle
+        High level modules and low level modules should depend on Abstractions
 
-13. Explain OOPS Concepts
-        Class
-            It is the blueprint or template for creating objects
-        Object
-            Instance of a class
-        Abstraction
-            Hiding the internal functionality and exposing only the required functionality
-        Encapsulation
-            Wrapping up of Data Variables and methods into object. It restricts direct access to object components
-        Inheritance
-            Child class can inherit the properties of parent class
-        Polymorphism
-            Can have multiple implementations.
+Explain OOPS Concepts
+    Class
+        It is the blueprint or template for creating objects
+    Object
+        Instance of a class
+    Abstraction
+        Hiding the internal functionality and exposing only the required functionality
+    Encapsulation
+        Wrapping up of Data Variables and methods into object. It restricts direct access to object components
+    Inheritance
+        Child class can inherit the properties of parent class
+    Polymorphism
+        Can have multiple implementations.
