@@ -128,3 +128,15 @@ Explain OOPS Concepts
         Child class can inherit the properties of parent class
     Polymorphism
         Can have multiple implementations.
+
+What are the uses of using Interfaces
+    Standardization
+        Interfaces declare methods that needs to be implemented by any implementing classes. Thus making sure that all have the same contract
+    Loose Coupling
+        We can reduce dependencies between concrete implementations of code
+        System gets more modular, easier to test & flexible for changes
+    Multiple Implementations
+        A class can implement multiple implementations
+    Dependency Injection
+        When injecting dependencies, when using interface, we can inject diff impl at runtime
+
