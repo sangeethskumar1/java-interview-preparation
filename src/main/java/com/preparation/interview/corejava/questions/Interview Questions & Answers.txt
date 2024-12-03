@@ -103,7 +103,7 @@ Explain Spring Package Scan
     Configuration Methods
         During the scanning process, Spring automatically registers these components as beans in the application context, making them available for dependency injection
 
-Explain Solid Principles
+Explain SOLID Principles
     Single Responsibility Principle
         A class must have only one responsibility
     Open Close Principle
