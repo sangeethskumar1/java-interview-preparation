@@ -1,0 +1,26 @@
+Idempotency in REST APIs
+    It is a principle that ensures making multiple identical requests has the same effect as making a single request
+    Fault Tolerance
+        It helps in making APIs more fault-tolerant by ensuring that duplicate requests do not cause unintended side effects
+    Consistency
+        Ensures consistent results, which is crucial for distributed systems
+    Caching
+        Enhances caching strategies, as caches can store and serve the results of idempotent requests to reduce server load and improve response times
+    Idempotent HTTP Methods
+        GET
+            Retrieves a resource without changing it
+        PUT
+            Updates a resource completely
+        DELETE
+            Removes a resource
+        HEAD
+            Similar to GET, but retrieves only the headers
+        OPTIONS
+            Describes the communication options for the target resource
+        TRACE
+            Performs a message loop-back test along the path to the target resource
+    Non-Idempotent HTTP Methods
+        POST
+            Used to create a new resource. Repeatedly sending the same POST request can create multiple resources
+        PATCH
+            Used for partial updates to a resource. Repeatedly sending the same PATCH request can lead to different outcomes depending on the resource's state

@@ -259,6 +259,8 @@ Microservice Communication
 
 Microservices Design Patterns
     API Gateway Pattern
+        Used in microservices architecture to manage and route requests to various microservices
+        It acts as a single entry point for all client interactions with a system of microservices, providing a unified interface
     Database Per Service Pattern
         Each service has its own database for storing its data		Prevent single point of failure		Services can use either SQL or NoSQL databases
     Circuit Breaker Pattern

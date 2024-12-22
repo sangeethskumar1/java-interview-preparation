@@ -65,3 +65,20 @@ What are the uses of using Interfaces
         A class can implement multiple implementations
     Dependency Injection
         When injecting dependencies, when using interface, we can inject diff impl at runtime
+
+Shallow Copy Vs Deep Copy
+    References
+        Shallow Copy
+            Copies only the references, so changes to the referenced objects in the copy will affect the original
+        Deep Copy
+            Copies the objects themselves, creating entirely new instances. Changes to the copied objects do not affect the original
+    Memory Usage
+        Shallow Copy
+            Less memory intensive, as it shares the same references
+        Deep Copy
+            More memory intensive, as it duplicates all referenced objects
+    Performance
+        Shallow Copy
+            Faster to create, as it only copies references.
+        Deep Copy
+            Slower to create, as it duplicates all objects and their contents
