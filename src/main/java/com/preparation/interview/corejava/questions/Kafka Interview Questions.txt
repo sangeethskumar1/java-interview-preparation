@@ -1,0 +1,44 @@
+Explain working of Kafka
+    Apache Kafka is an open-source distributed event streaming platform used for building real-time data pipelines and streaming applications
+    It's designed to handle large volumes of data with high throughput and low latency
+
+    Key Components
+    Producer
+        An application that sends (produces) messages to Kafka topics.
+    Consumer
+        An application that reads (consumes) messages from Kafka topics.
+    Broker
+        A Kafka server that stores and serves messages. Kafka clusters typically have multiple brokers to handle high throughput.
+    Topic
+        A category or feed name to which records are sent by producers. Topics are partitioned for scalability.
+    Partition
+        Each topic can have multiple partitions, allowing data to be distributed across multiple brokers.
+    Zookeeper
+        Manages and coordinates the Kafka brokers. (Note: Kafka is moving towards replacing Zookeeper with its own metadata quorum.)
+
+    How Kafka Works
+    Producers Send Messages
+        Producers are applications or systems that send messages to Kafka topics.
+        When a producer sends a message, it chooses a topic and optionally a partition within that topic.
+        The message is then appended to the end of the chosen partition.
+    Message Storage
+        Kafka stores messages in a distributed, replicated log.
+        Each partition is an ordered, immutable sequence of records.
+        Messages are identified by their unique offset within the partition, ensuring their position is maintained.
+    Consumers Read Messages
+        Consumers read messages from Kafka topics. They subscribe to one or more topics and pull messages from partitions.
+        Kafka ensures that each message is delivered to one consumer instance within each consumer group.
+        Consumers can keep track of their position in each partition by storing offsets, which allows them to pick up where they left off.
+    Brokers and Clusters
+        Kafka is run as a cluster on one or more servers, called brokers.
+        Each broker stores one or more partitions of one or more topics.
+        Brokers communicate with each other and handle client requests (from producers and consumers).
+    Replication and Fault Tolerance
+        Kafka provides fault tolerance by replicating partitions across multiple brokers.
+        Each partition has one leader broker and several follower brokers.
+        The leader handles all read and write requests, while followers replicate the data.
+        If the leader fails, a follower takes over, ensuring high availability.
+    Zookeeper
+        It is used for managing and coordinating Kafka brokers.
+        It keeps track of the brokers, topics, and partitions.
+        Kafka is transitioning to use its own internal mechanism for this role, but Zookeeper is still commonly used.

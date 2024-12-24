@@ -87,119 +87,6 @@ API Gateway
     Monitoring & Logging
         Track & Log API Usage, Performance Metrics and errors to help with debugging & monitoring
 
-API Security.
-    API Security is the practice of protecting APIs from attacks and ensuring that they function as intended without exposing sensitive data or services to unauthorized users
-
-    Best Practices for API Security
-    Authentication and Authorization
-        Use strong authentication methods like OAuth 2.0, API keys, and JWT tokens to ensure only authorized users can access the API2.
-    Encryption
-        Implement TLS/SSL to encrypt data in transit, ensuring that sensitive information is not exposed.
-    Rate Limiting.
-        Limit the number of requests a client can make in a given time period to prevent abuse and DoS attacks.
-    Input Validation
-        Validate all inputs to prevent injection attacks and ensure data integrity.
-    API Gateway
-        Use an API Gateway to centralize security features like rate limiting, authentication, and logging.
-    Monitoring and Logging
-        Keep detailed logs of API activity and monitor for unusual patterns that might indicate an attack.
-    Error Handling
-        Ensure that error messages do not expose sensitive information about the API or its backend systems.
-
-Spring Security
-	Powerful & Highly Customizable Authentication & Authorization framework for java applications provided by spring.
-	Authentication and Authorization
-		Provides comprehensive support for both authentication (verifying user identity) and authorization (controlling access to resources).
-	Protection Against Common Attacks
-		Includes built-in protection against common security threats such as CSRF (Cross-Site Request Forgery), XSS (Cross-Site Scripting), and session fixation.
-	Integration with Spring Framework
-		Seamlessly integrates with other Spring projects like Spring Boot, making it easier to secure applications.
-	Use Spring Starter Security Dependency in Spring Boot Applications
-	Configure Security Settings using Configuration Class
-
-JSON Web Token - JWT
-    Compact URL safe method of representing claims to be transferred between two parties
-    Used for authentication & information exchange in web applications
-
-    JWT has 3 Parts
-    Header
-        Contains metadata about the token. Token Type, Signing algorithm etc
-    Payload
-        Contains the claims which are details about the entity.
-        Registered Claims
-            Predefined claims such as Issuer, Expiration Time, Subject & Audience
-        Public Claims
-            Custom claims that can be developed by user
-        Private Claims
-            Custom claims that are intended to be shared between parties that agree on using them
-    Signature
-        Verify that the sender of the JWT is who it says it is and ensure that the message wasn't changed along the way
-        The signature is created by encoding the header and payload using Base64url encoding and then signing that string using the algorithm specified in the header
-
-    Working of JWT
-    Authentication
-        When a user logs in, the server creates a JWT and send it to client.
-        Client store the JWT and includes it in Authorization header of subsequent requests
-    Authorization
-        The server verifies the JWT on each request and ensure that the user is authenticated and authorized to access the data
-
-Open Authorization - OAuth
-    Open Standard Protocol for authorization of an application in using user information.
-    Allows 3rd party application to access user information without providing the 3rd party app with user credentials
-    eg: Login with Google, Import Data from LinkedIn etc
-
-    Parts of OAuth
-    Resource Owner
-        The user who owns the data and can grant access to it
-    Client
-        The application requesting access to the user's resources
-    Authorization Server
-        The server that authenticates the user and issues access tokens to the client
-    Resource Server
-        The server hosting the protected resources, which accepts and validates access tokens
-
-    OAuth Flow
-    Authorization Request
-        Client requests authorization from the resource owner via the authorization server
-    Authorization Grant
-        The resource owner provides grants authorization typically through a consent
-    Access Token Request
-        The Client requests an access token from the authorization server using the authorization grant
-    Access Token Response
-        The authorization server issues an access token as response to the client
-    Resource Request
-        The client request for resources from the resource server using the access token
-    Resource Response
-        The Resource server validates the token and returns the requested resources
-
-Grant Types
-	Authorization Code Grant
-		Best for web and mobile apps, high security
-	Implicit Grant
-		Suitable for SPAs, but less secure
-	Resource Owner Password Credentials Grant
-		Simple but requires high trust
-	Client Credentials Grant
-		Ideal for server-to-server communication
-	Device Authorization Grant
-		Great for devices with limited input
-	Refresh Token Grant
-		Useful for maintaining long-lived sessions
-
-Basic Authentication.
-	Basic Authentication is a simple and widely used method for enforcing access controls to web resources.
-	It involves sending a username and password with each HTTP request, encoded in Base64
-	Client Request
-		The client sends a request to the server.
-	Server Response
-		The server responds with a 401 Unauthorized status and a WWW-Authenticate header indicating that Basic Authentication is required.
-	Client Credentials
-		The client resends the request with an Authorization header containing the credentials encoded in Base64
-	Best Practices
-		Always use HTTPS
-		Use Strong Password
-		Implement Additional Security Measures such as MFA
-
 Spring Cloud
     Framework that provides tools for developers to quickly build some of the common patterns in distributed systems.
     Configuration Management, Service Discovery, Circuit Breakers, Intelligent Routing etc
@@ -208,7 +95,7 @@ Sticky Sessions.
     Sticky sessions, also known as session persistence or session affinity
     It is a technique used in load balancing to ensure that a user's requests are always directed to the same server during a session
     This approach helps maintain session state and provides a consistent user experience
-    Usually achived using cookies or IP Address mapping
+    Usually achieved using cookies or IP Address mapping
 
     Benefits
         Simplicity
