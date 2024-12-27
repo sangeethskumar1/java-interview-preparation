@@ -175,3 +175,52 @@ Microservices Design Patterns
         The Sidecar pattern deploys helper components (sidecars) alongside the main microservices.
         These sidecars handle cross-cutting concerns like logging, monitoring, and configuration management, allowing the main services to focus on business logic
 
+Handling Failures in Microservices
+	Circuit Breaker Pattern
+		Hysterix, Reselliance 4j
+	Retries with Exponential Backoff
+		Retries with incremental wait time between attempts.
+	Timeouts
+		Set timeout for a service call ensure that the system is not stuck at a point.
+	BulkHead Pattern
+	Health Check & Monitoring
+	Asynchronous Communication
+
+API Calls in Spring Boot application
+	RestTemplate
+		Synchronous client for making http requests. Recommended for legacy applications.
+	WebClient
+		Preferred way for non-blocking, reactive applications. Supports both Synchronous & Asynchronous requests.
+	RestClient
+		Newer Synchronous client introduced to replace RestTemplate.
+
+Swagger
+	Powerful tool for documenting and testing RESTful APIs.
+	Autogenerate API documentation for spring boot application.
+
+Service Mesh
+	A service mesh is an infrastructure layer that manages communication between microservices in a distributed application. 
+	It provides a way to control how different parts of an application share data with one another
+	eg: Istio
+	Key Components
+		Data Plane
+			Proxies
+				Each microservice is paired with a proxy(sidecar) that handles all inbound and outbound traffic.
+			Traffic Management
+				Data plane manages traffic between services including load balancing, retries, circuit breaking
+		Control Plane
+			Configuration Management
+				Control plane provides a centralized interface for managing configuration of proxies
+			Service Discovery
+				Keeps track of all services within the mesh and their endpoints
+			Telemetry
+				Collect metrics, logs and traces for observability
+		Benefits
+			Observability
+				Provides detailed insights into service interactions, including metrics, logs, and distributed tracing
+			Security
+				Implements security features like mutual TLS (mTLS) for encrypting service-to-service communication and enforcing authentication and authorization policies
+			Traffic Management
+				Offers advanced traffic control capabilities such as load balancing, traffic splitting, and canary deployments
+			Resillience
+				Enhances the resilience of the application by managing retries, timeouts, and circuit breakers to handle failures gracefully

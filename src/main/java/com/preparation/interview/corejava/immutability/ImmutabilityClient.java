@@ -8,7 +8,9 @@ public class ImmutabilityClient {
         System.out.println(immutableNonObject); // ImmutableNonObject(id=1, name=Sangeeth)
         id = 2;
         name = "Shwetha";
+        ImmutableNonObject immutableNonObject2 = new ImmutableNonObject(id, name);
         System.out.println(immutableNonObject);// ImmutableNonObject(id=1, name=Sangeeth)
+        System.out.println(immutableNonObject2);// ImmutableNonObject(id=2, name=Shwetha)
         System.out.println();
     }
 }

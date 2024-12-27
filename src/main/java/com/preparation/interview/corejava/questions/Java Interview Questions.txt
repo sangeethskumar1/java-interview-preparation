@@ -82,3 +82,9 @@ Shallow Copy Vs Deep Copy
             Faster to create, as it only copies references.
         Deep Copy
             Slower to create, as it duplicates all objects and their contents
+
+Marker Interface
+	Doesn't contain any methods or fields
+	eg: Serializable, Cloneable
+
+Difference between Exception & Error
