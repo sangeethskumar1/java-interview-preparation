@@ -1,0 +1,54 @@
+Kubernetes
+    It is an open-source platform designed to automate the deployment, scaling, and operation of containerized applications
+    Key Concepts
+        Container Management
+            Kubernetes manages large clusters of containerized applications, ensuring they run smoothly and efficiently
+        Cluster
+            A cluster is a set of nodes (virtual or physical machines) that run containerized applications
+        Node
+            A node is a machine within the Kubernetes cluster, which can be either a master or a worker node
+            Master Node
+                Manages the cluster and coordinates all activities.
+            Worker Node
+                Runs the containerized applications
+        Pod
+            The smallest deployable unit in Kubernetes
+            A pod can contain one or more containers that share storage, network, and specifications
+        Service
+            A way to expose an application running on a set of pods as a network service
+            Services enable pods to communicate with each other and with the outside world
+        Deployment
+            Defines the desired state for your application
+            Kubernetes continuously monitors and maintains the desired state
+        Replicaset
+            Ensures a specified number of pod replicas are running at any given time
+            Often used by deployments to maintain the desired state
+        Namespace
+            Provides a way to divide cluster resources between multiple users
+
+    How Kubernetes Works
+        Container Deployment
+            Developers define their application in a YAML or JSON file, specifying details like the container image, environment variables, and desired state
+        Scheduler
+            The Kubernetes scheduler assigns pods to nodes based on resource availability and constraints
+        Controller Manager
+            Monitors the state of the cluster and makes adjustments to ensure the desired state is maintained
+        API Server
+            Serves as the front end for the Kubernetes control plane
+            Processes and validates RESTful API calls and updates the cluster state
+        Kubelet
+            Runs on each worker node and ensures the containers are running as expected
+            Communicates with the master node to receive instructions and report back the state of the node
+
+    Benefits of Kubernetes
+        Scalability
+            Automatically scales applications up and down based on demand
+        Self-Healing
+            Restarts failed containers, replaces and reschedules them, and kills containers that don’t respond to health checks
+        Efficient Resource Utilization
+            Distributes application workloads and resources efficiently across the cluster
+        Portability
+            Supports multi-cloud and hybrid-cloud environments, making it easy to move applications across different cloud providers
+        Extensibility
+            Supports custom resource definitions and integrates with a wide range of tools and plugins
+
