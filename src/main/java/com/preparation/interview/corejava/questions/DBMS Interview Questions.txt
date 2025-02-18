@@ -1,0 +1,15 @@
+What is Normalization
+    Process used to organize a database in order to reduce redundancy and improve data integrity
+
+    Goals
+        Eliminate redundant data (for example, storing the same data in more than one table)
+        Ensure data dependencies make sense (only storing related data in a table).
+
+Different Types of Normalization
+    1NF
+        Ensure that each table column contains atomic (indivisible) values and that each column contains only one type of data
+    2NF
+        Achieved when a table is in 1NF and all non-key attributes are fully functional dependent on the primary key
+    3NF
+        Achieved when a table is in 2NF and all the attributes are functionally independent of all other non-key attributes
+
