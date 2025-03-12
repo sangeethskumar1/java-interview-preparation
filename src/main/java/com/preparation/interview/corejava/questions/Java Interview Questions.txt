@@ -88,3 +88,5 @@ Marker Interface
 	eg: Serializable, Cloneable
 
 Difference between Exception & Error
+
+Difference between Collectors.joining() & reduce()

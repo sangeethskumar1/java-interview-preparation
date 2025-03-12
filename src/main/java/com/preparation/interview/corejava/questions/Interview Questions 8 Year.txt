@@ -1,0 +1,33 @@
+
+Please tell me about yourself
+Tell me about the project you are working on
+Any Project related Questions
+Have you created HLD/LLD ?
+How do you mentor your Junior Members
+
+Explain the SOLID Principles
+What are the uses of using Interfaces
+What are Marker Interfaces.
+What are the features that you used in latest versions of java
+What do you mean by functional programming
+What is the use of Optional class
+What is the use of map and flatmap in stream
+How Spring Boot Works. Explain AutoConfiguration
+What are the difference sprint boot annotations
+What is the difference between Spring Bean & Spring Component
+Why Microservices
+Handling Failures in Microservices
+Explain Microservice Communication
+Explain any Design Patterns
+Explain any Microservices Design Patterns
+What is Service Mesh
+Explain the working of Kafka
+Explain corner cases of Kafka and how it can be handled
+What are ACID Properties
+What do you mean by Normalization
+When to use SQL & NoSQL Databases
+Benefits of Kubernetes
+What is CI/CD.
+TDD/ BDD
+Any Cloud Knowledge
+System Design for CRUD Application with single editor access
