@@ -7,6 +7,7 @@ How do you mentor your Junior Members
 
 Explain the SOLID Principles
 What are the uses of using Interfaces
+Explain the working of HashSet
 What are Marker Interfaces.
 What are the features that you used in latest versions of java
 What do you mean by functional programming
