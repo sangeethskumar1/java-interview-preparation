@@ -1,4 +1,4 @@
-package com.preparation.interview.corejava.streams;
+package com.preparation.interview.corejava.streams.strings;
 
 import java.util.Collections;
 import java.util.List;

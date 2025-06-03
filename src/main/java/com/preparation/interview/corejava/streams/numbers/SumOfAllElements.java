@@ -1,4 +1,4 @@
-package com.preparation.interview.corejava.streams;
+package com.preparation.interview.corejava.streams.numbers;
 
 import java.util.Arrays;
 import java.util.List;
