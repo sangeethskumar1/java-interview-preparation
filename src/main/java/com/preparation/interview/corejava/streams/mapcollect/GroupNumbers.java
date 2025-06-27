@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
- * Group Numbers in list by no of instances
+ * Group Numbers in List by No of Instances
  */
 public class GroupNumbers {
     public static void main(String[] args) {

@@ -1,8 +1,5 @@
 package com.preparation.interview.corejava.immutability;
 
-import lombok.ToString;
-
-@ToString
 public class ImmutableNonObject {
     private final int id;
     private final String name;
